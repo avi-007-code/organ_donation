@@ -1,10 +1,10 @@
 import { useId } from 'react'
 
-export default function Logo({ light = false }) {
+export default function Logo({ light = false, href = '#top' }) {
   const gradientId = useId()
 
   return (
-    <a className={`logo ${light ? 'logo-light' : ''}`} href="#top">
+    <a className={`logo ${light ? 'logo-light' : ''}`} href={href}>
       <svg className="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
         <defs>
           <linearGradient id={gradientId} x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
