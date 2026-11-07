@@ -28,7 +28,7 @@ export default function Navbar() {
         </nav>
 
         <div className="nav-actions">
-          <a href="#access" className="btn btn-ghost btn-sm">
+          <a href="/login" className="btn btn-ghost btn-sm">
             Sign in
           </a>
           <a href="#access" className="btn btn-primary btn-sm">
@@ -58,10 +58,15 @@ export default function Navbar() {
             </a>
           ))}
         </nav>
-        <a href="#access" className="btn btn-primary" onClick={closeMenu}>
-          Request hospital access
-          <ArrowRight size={16} aria-hidden="true" />
-        </a>
+        <div className="mobile-menu-actions">
+          <a href="/login" className="btn btn-ghost" onClick={closeMenu}>
+            Sign in
+          </a>
+          <a href="#access" className="btn btn-primary" onClick={closeMenu}>
+            Request hospital access
+            <ArrowRight size={16} aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </header>
   )
